@@ -8,9 +8,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class UserService {
+public class UserService { // repository 에서 작성한 CRUD를 여기에서도 작성!
 
-    @Autowired // 의존성을 추가해주는 것임 -> service와 repository 계층 연결!
+    @Autowired // 의존성을 주입하는 것임 -> service와 repository 계층 연결! // 앞서 계층끼리만 통신해야한다고 언급
+    // Spring의 생명 주기는 한 번 꼭 공부해보시라고 말씀하심!
     UserRepository userRepository;
 
     public UserDTO insertUser(UserDTO user) {
